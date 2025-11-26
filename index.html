@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>API Documentation</title>
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+/* Smooth fade & slide */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-up { animation: fadeUp 1s ease-out; }
+
+/* Card hover effect */
+.card-hover {
+  transition: all 0.25s ease;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(255, 0, 80, 0.25);
+}
+</style>
+
+</head>
+
+<body class="bg-gray-950 text-white min-h-screen">
+
+<!-- TOP STATUS BAR -->
+<div class="w-full bg-gradient-to-r from-pink-600 to-red-600 py-4 shadow-lg">
+  <h1 class="text-center text-lg font-semibold tracking-wide">
+    ❤️ SYSTEM OPERATIONAL • API ACTIVE
+  </h1>
+</div>
+
+<!-- MAIN CONTAINER -->
+<div class="max-w-4xl mx-auto px-6 py-14 fade-up">
+
+  <!-- TITLE -->
+  <h1 class="text-5xl font-extrabold text-center mb-4">
+    API Endpoints
+  </h1>
+  <p class="text-center text-gray-400 text-lg mb-12">
+    Premium REST API for AI Prompt Lookup
+  </p>
+
+  <!-- CARD 1 -->
+  <div class="bg-gray-900 border border-gray-800 p-6 rounded-2xl card-hover">
+      <h2 class="text-2xl font-semibold mb-2">GET /api/lookup</h2>
+      <p class="text-gray-400 mb-4">Query parameter based request</p>
+
+      <div class="bg-black p-4 rounded-xl font-mono text-sm text-pink-300 overflow-x-auto">
+        GET https://your-vercel-domain.vercel.app/api/lookup?query=hello
+      </div>
+  </div>
+
+  <!-- CARD 2 -->
+  <div class="bg-gray-900 border border-gray-800 p-6 rounded-2xl card-hover mt-8">
+      <h2 class="text-2xl font-semibold mb-2">Response Example</h2>
+      <p class="text-gray-400 mb-4">Standard JSON output</p>
+
+      <div class="bg-black p-4 rounded-xl font-mono text-sm text-pink-300 overflow-x-auto">
+{
+  "success": true,
+  "query": "hello",
+  "response": { ... }
+}
+      </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="text-center text-gray-500 text-md mt-16">
+      Developer: <span class="text-pink-400 font-semibold">PROFESSOR AMMAR</span>
+  </footer>
+
+</div>
+
+</body>
+</html>
